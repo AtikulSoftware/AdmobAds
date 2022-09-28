@@ -39,5 +39,27 @@ Banner		 - ca-app-pub-3940256099942544/6300978111
 Interstitial	 - ca-app-pub-3940256099942544/1033173712
 ```
 
+> Show Admob Banner Ads 
+```
+LinearLayout bannerAds;
+bannerAds = findViewById(R.id.bannerAds);
+AdmobBannerAds.loadAds(bannerAds, MainActivity.this, "ca-app-pub-3940256099942544/6300978111");
+```
+
+> Load And Show Interstitial Ads
+```
+// for full screen ads
+AdmobInterstitialAd.InterstitialAdUnitID = "ca-app-pub-3940256099942544/1033173712";
+AdmobInterstitialAd.LoadInterstitial(MainActivity.this);
+
+        showfullscreenads.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // code here ====
+                AdmobInterstitialAd.ShowAds(MainActivity.this);
+            }
+        });
+```
+
 > This Library Created By Atikul Software. It is Educational purposes. 
 Name : Md Atikul Islam
